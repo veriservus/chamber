@@ -307,8 +307,9 @@ func idToName(id SecretId) string {
 }
 
 func parameterMetaToSecretMeta(p *ssm.ParameterMetadata) SecretMetadata {
-	if version, err := strconv.Atoi(*p.Description); err != nil {
-		version := 1
+	if version, err := strconv.Atoi(*p.Description)
+	if err != nil {
+		version = 1
 	}
 	return SecretMetadata{
 		Created:   *p.LastModifiedDate,
