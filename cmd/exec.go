@@ -9,7 +9,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/segmentio/chamber/store"
+	"github.com/veriservus/chamber/store"
 	"github.com/spf13/cobra"
 )
 
